@@ -11,10 +11,10 @@ export function Toolbar () {
       {({fontFamilySetting, toggleSetting}) => (
         <form>
         <div><label>Choose font</label></div>
-        <select onChange={toggleSetting} name="fontFamilySetting">
+        <select className="fontOptions" onChange={toggleSetting} name="fontFamilySetting">
             return <option name="fontFamilySetting" value="">Select..</option>
           {fontFamilySettingKeys.map((k) => {
-            return <option name="fontFamilySetting" value={k}>{k}</option>
+            return <option className="fontOptions" name="fontFamilySetting" value={k}>{k}</option>
           })}
         </select>
         </form>
