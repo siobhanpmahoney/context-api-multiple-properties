@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const fontOptions = {
+const fontOptions = {
   sans: {
     fontFamily: "Helvetica"
   },
@@ -12,7 +12,7 @@ export const fontOptions = {
   }
 }
 
-export const colorOptions = {
+const colorOptions = {
   coral: {color: "#FF5370"},
   blue: {color: "#3D4DF2"},
   aquamarine: {color: "#54d1ff"}
