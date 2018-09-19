@@ -1,10 +1,10 @@
 import React from 'react'
-import {fontOptions, colorOptions, DEFAULT_SETTINGS, DisplayContext} from '../context/DisplayContext'
+import {fontOptions, colorOptions, allSettings, DEFAULT_SETTINGS, DisplayContext} from '../context/DisplayContext'
 
 export function Toolbar () {
   //
   // render()
-    const fontFamilySettingKeys = Object.keys(fontOptions)
+    const fontFamilySettingKeys = Object.keys(allSettings.fontOptions)
 
     return (
       <DisplayContext.Consumer>
