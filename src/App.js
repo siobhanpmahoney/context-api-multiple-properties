@@ -17,15 +17,11 @@ class App extends Component {
   }
 
   toggleSetting = (event) => {
-    debugger
     let stateCopy = Object.assign({}, this.state.settings)
     let name = event.target.name
     let selection = event.target.value
     let type = event.target.className
-    let ff = fontOptions
-    let tc = colorOptions
-    let as = allSettings
-    stateCopy[name] = as[type][selection]
+    stateCopy[name] = allSettings[type][selection]
 
       this.setState({
         settings: stateCopy
