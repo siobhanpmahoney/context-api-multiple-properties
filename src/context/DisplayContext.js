@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const settings = {
+export const fontOptions = {
   sans: {
     fontFamily: "Helvetica"
   },
@@ -12,7 +12,23 @@ export const settings = {
   }
 }
 
+export const colorOptions = {
+  coral: {color: "#FF5370"},
+  blue: {color: "#3D4DF2"},
+  aquamarine: {color: "#54d1ff"}
+}
+
+export const allSettings = {
+  fontOptions,
+  colorOptions
+}
+
+export const DEFAULT_SETTINGS = {
+  fontFamilySetting: fontOptions["sans"],
+  textColorSetting: colorOptions["blue"]
+}
+
 export const DisplayContext = React.createContext({
-  setting: settings.serif,
+  settings: DEFAULT_SETTINGS,
   toggleSetting: () => {}
 })

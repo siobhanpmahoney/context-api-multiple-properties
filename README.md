@@ -963,8 +963,8 @@ REACT_APP_SECRET_CODE=abcdef
 
 * `.env`: Default.
 * `.env.local`: Local overrides. **This file is loaded for all environments except test.**
-* `.env.development`, `.env.test`, `.env.production`: Environment-specific settings.
-* `.env.development.local`, `.env.test.local`, `.env.production.local`: Local overrides of environment-specific settings.
+* `.env.development`, `.env.test`, `.env.production`: Environment-specific fontOptions.
+* `.env.development.local`, `.env.test.local`, `.env.production.local`: Local overrides of environment-specific fontOptions.
 
 Files on the left have more priority than files on the right:
 
@@ -1165,11 +1165,11 @@ Matches are regular expressions, so that you can use a regexp to match multiple 
 
 ### Configuring a WebSocket Proxy
 
-When setting up a WebSocket proxy, there are a some extra considerations to be aware of.
+When fontFamilySetting up a WebSocket proxy, there are a some extra considerations to be aware of.
 
 If you’re using a WebSocket engine like [Socket.io](https://socket.io/), you must have a Socket.io server running that you can use as the proxy target. Socket.io will not work with a standard WebSocket server. Specifically, don't expect Socket.io to work with [the websocket.org echo test](http://websocket.org/echo.html).
 
-There’s some good documentation available for [setting up a Socket.io server](https://socket.io/docs/).
+There’s some good documentation available for [fontFamilySetting up a Socket.io server](https://socket.io/docs/).
 
 Standard WebSockets **will** work with a standard WebSocket server as well as the websocket.org echo test. You can use libraries like [ws](https://github.com/websockets/ws) for the server, with [native WebSockets in the browser](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket).
 
@@ -1561,16 +1561,16 @@ Example package.json:
 
 ### Continuous Integration
 
-By default `npm test` runs the watcher with interactive CLI. However, you can force it to run tests once and finish the process by setting an environment variable called `CI`.
+By default `npm test` runs the watcher with interactive CLI. However, you can force it to run tests once and finish the process by fontFamilySetting an environment variable called `CI`.
 
-When creating a build of your application with `npm run build` linter warnings are not checked by default. Like `npm test`, you can force the build to perform a linter warning check by setting the environment variable `CI`. If any warnings are encountered then the build fails.
+When creating a build of your application with `npm run build` linter warnings are not checked by default. Like `npm test`, you can force the build to perform a linter warning check by fontFamilySetting the environment variable `CI`. If any warnings are encountered then the build fails.
 
 Popular CI servers already set the environment variable `CI` by default but you can do this yourself too:
 
 ### On CI servers
 #### Travis CI
 
-1. Following the [Travis Getting started](https://docs.travis-ci.com/user/getting-started/) guide for syncing your GitHub repository with Travis.  You may need to initialize some settings manually in your [profile](https://travis-ci.org/profile) page.
+1. Following the [Travis Getting started](https://docs.travis-ci.com/user/getting-started/) guide for syncing your GitHub repository with Travis.  You may need to initialize some fontOptions manually in your [profile](https://travis-ci.org/profile) page.
 1. Add a `.travis.yml` file to your git repository.
 ```
 language: node_js
@@ -1973,7 +1973,7 @@ npm install -g serve
 serve -s build
 ```
 
-The last command shown above will serve your static site on the port **5000**. Like many of [serve](https://github.com/zeit/serve)’s internal settings, the port can be adjusted using the `-p` or `--port` flags.
+The last command shown above will serve your static site on the port **5000**. Like many of [serve](https://github.com/zeit/serve)’s internal fontOptions, the port can be adjusted using the `-p` or `--port` flags.
 
 Run this command to get a full list of the options available:
 
@@ -2234,11 +2234,11 @@ Then run:
 npm run deploy
 ```
 
-#### Step 4: Ensure your project’s settings use `gh-pages`
+#### Step 4: Ensure your project’s fontOptions use `gh-pages`
 
-Finally, make sure **GitHub Pages** option in your GitHub project settings is set to use the `gh-pages` branch:
+Finally, make sure **GitHub Pages** option in your GitHub project fontOptions is set to use the `gh-pages` branch:
 
-<img src="http://i.imgur.com/HUjEr9l.png" width="500" alt="gh-pages branch setting">
+<img src="http://i.imgur.com/HUjEr9l.png" width="500" alt="gh-pages branch fontFamilySetting">
 
 #### Step 5: Optionally, configure the domain
 
@@ -2257,7 +2257,7 @@ GitHub Pages doesn’t support routers that use the HTML5 `pushState` history AP
 
 If, when deploying, you get `/dev/tty: No such a device or address` or a similar error, try the follwing:
 
-1. Create a new [Personal Access Token](https://github.com/settings/tokens)
+1. Create a new [Personal Access Token](https://github.com/fontOptions/tokens)
 2. `git remote set-url origin https://<user>:<token>@github.com/<user>/<repo>` .
 3. Try `npm run deploy again`
 
@@ -2367,7 +2367,7 @@ Note that in order to support routers that use HTML5 `pushState` API, you may wa
 
 ## Advanced Configuration
 
-You can adjust various development and production settings by setting environment variables in your shell or with [.env](#adding-development-environment-variables-in-env).
+You can adjust various development and production fontOptions by fontFamilySetting environment variables in your shell or with [.env](#adding-development-environment-variables-in-env).
 
 Variable | Development | Production | Usage
 :--- | :---: | :---: | :---
@@ -2377,10 +2377,10 @@ PORT | :white_check_mark: | :x: | By default, the development web server will at
 HTTPS | :white_check_mark: | :x: | When set to `true`, Create React App will run the development server in `https` mode.
 PUBLIC_URL | :x: | :white_check_mark: | Create React App assumes your application is hosted at the serving web server's root or a subpath as specified in [`package.json` (`homepage`)](#building-for-relative-paths). Normally, Create React App ignores the hostname. You may use this variable to force assets to be referenced verbatim to the url you provide (hostname included). This may be particularly useful when using a CDN to host your application.
 CI | :large_orange_diamond: | :white_check_mark: | When set to `true`, Create React App treats warnings as failures in the build. It also makes the test runner non-watching. Most CIs set this flag by default.
-REACT_EDITOR | :white_check_mark: | :x: | When an app crashes in development, you will see an error overlay with clickable stack trace. When you click on it, Create React App will try to determine the editor you are using based on currently running processes, and open the relevant source file. You can [send a pull request to detect your editor of choice](https://github.com/facebookincubator/create-react-app/issues/2636). Setting this environment variable overrides the automatic detection. If you do it, make sure your systems [PATH](https://en.wikipedia.org/wiki/PATH_(variable)) environment variable points to your editor’s bin folder. You can also set it to `none` to disable it completely.
+REACT_EDITOR | :white_check_mark: | :x: | When an app crashes in development, you will see an error overlay with clickable stack trace. When you click on it, Create React App will try to determine the editor you are using based on currently running processes, and open the relevant source file. You can [send a pull request to detect your editor of choice](https://github.com/facebookincubator/create-react-app/issues/2636). fontFamilySetting this environment variable overrides the automatic detection. If you do it, make sure your systems [PATH](https://en.wikipedia.org/wiki/PATH_(variable)) environment variable points to your editor’s bin folder. You can also set it to `none` to disable it completely.
 CHOKIDAR_USEPOLLING | :white_check_mark: | :x: | When set to `true`, the watcher runs in polling mode, as necessary inside a VM. Use this option if `npm start` isn't detecting changes.
 GENERATE_SOURCEMAP | :x: | :white_check_mark: | When set to `false`, source maps are not generated for a production build. This solves OOM issues on some smaller machines.
-NODE_PATH | :white_check_mark: |  :white_check_mark: | Same as [`NODE_PATH` in Node.js](https://nodejs.org/api/modules.html#modules_loading_from_the_global_folders), but only relative folders are allowed. Can be handy for emulating a monorepo setup by setting `NODE_PATH=src`.
+NODE_PATH | :white_check_mark: |  :white_check_mark: | Same as [`NODE_PATH` in Node.js](https://nodejs.org/api/modules.html#modules_loading_from_the_global_folders), but only relative folders are allowed. Can be handy for emulating a monorepo setup by fontFamilySetting `NODE_PATH=src`.
 
 ## Troubleshooting
 
@@ -2393,7 +2393,7 @@ If this doesn’t happen, try one of the following workarounds:
 * If the watcher doesn’t see a file called `index.js` and you’re referencing it by the folder name, you [need to restart the watcher](https://github.com/facebookincubator/create-react-app/issues/1164) due to a Webpack bug.
 * Some editors like Vim and IntelliJ have a “safe write” feature that currently breaks the watcher. You will need to disable it. Follow the instructions in [“Adjusting Your Text Editor”](https://webpack.js.org/guides/development/#adjusting-your-text-editor).
 * If your project path contains parentheses, try moving the project to a path without them. This is caused by a [Webpack watcher bug](https://github.com/webpack/watchpack/issues/42).
-* On Linux and macOS, you might need to [tweak system settings](https://github.com/webpack/docs/wiki/troubleshooting#not-enough-watchers) to allow more watchers.
+* On Linux and macOS, you might need to [tweak system fontOptions](https://github.com/webpack/docs/wiki/troubleshooting#not-enough-watchers) to allow more watchers.
 * If the project runs inside a virtual machine such as (a Vagrant provisioned) VirtualBox, create an `.env` file in your project directory if it doesn’t exist, and add `CHOKIDAR_USEPOLLING=true` to it. This ensures that the next time you run `npm start`, the watcher uses the polling mode, as necessary inside a VM.
 
 If none of these solutions help please leave a comment [in this thread](https://github.com/facebookincubator/create-react-app/issues/659).
