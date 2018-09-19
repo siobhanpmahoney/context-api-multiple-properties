@@ -10,7 +10,7 @@ export function TextColorToolbar () {
     <DisplayContext.Consumer>
       {({textColorSetting, toggleSetting}) => (
         <form>
-          <div><label>Choose font</label></div>
+          <div><label>Choose Color</label></div>
           <select name="textColorSetting" className="colorOptions" onChange={toggleSetting}>
             return <option name="textColorSetting" value="">Select..</option>
             {options.map((k) => {

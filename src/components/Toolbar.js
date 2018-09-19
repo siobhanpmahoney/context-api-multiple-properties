@@ -10,7 +10,7 @@ export function Toolbar () {
       <DisplayContext.Consumer>
       {({fontFamilySetting, toggleSetting}) => (
         <form>
-        <div><label>Choose font</label></div>
+        <div><label>Choose Font</label></div>
         <select className="fontOptions" onChange={toggleSetting} name="fontFamilySetting">
             return <option name="fontFamilySetting" value="">Select..</option>
           {fontFamilySettingKeys.map((k) => {
