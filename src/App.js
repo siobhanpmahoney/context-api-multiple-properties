@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {fontOptions, colorOptions, allSettings, DEFAULT_SETTINGS, DisplayContext} from './context/DisplayContext'
+import {allSettings, DEFAULT_SETTINGS, DisplayContext} from './context/DisplayContext'
 import PageContainer from './components/PageContainer'
 import { Toolbar } from './components/Toolbar'
 

@@ -2,7 +2,7 @@ import React from 'react'
 import {PageContent} from './PageContent'
 import {Toolbar} from './Toolbar'
 import {TextColorToolbar} from './TextColorToolbar'
-import {fontOptions, colorOptions, DEFAULT_SETTINGS, DisplayContext} from '../context/DisplayContext'
+import {DEFAULT_SETTINGS, DisplayContext} from '../context/DisplayContext'
 
 class PageContainer extends React.Component {
   render() {

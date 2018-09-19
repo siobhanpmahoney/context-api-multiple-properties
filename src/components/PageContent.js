@@ -1,5 +1,5 @@
 import React from 'react'
-import {fontOptions, colorOptions, DEFAULT_SETTINGS, DisplayContext} from '../context/DisplayContext'
+import {DEFAULT_SETTINGS, DisplayContext} from '../context/DisplayContext'
 
 
 // export function PageContent() {

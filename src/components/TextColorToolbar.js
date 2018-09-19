@@ -1,5 +1,5 @@
 import React from 'react'
-import {allSettings, colorOptions, fontOptions, DEFAULT_SETTINGS, DisplayContext} from '../context/DisplayContext'
+import {allSettings, DEFAULT_SETTINGS, DisplayContext} from '../context/DisplayContext'
 
 export function TextColorToolbar () {
   //
